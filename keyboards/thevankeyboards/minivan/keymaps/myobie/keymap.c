@@ -1,5 +1,6 @@
 #include QMK_KEYBOARD_H
 #include <print.h>
+#include <unistd.h>
 
 extern keymap_config_t keymap_config;
 
@@ -21,7 +22,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                  KC_ESC , _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_BSPC,
                  KC_TAB , _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, GO1    ,
                  KC_LSFT, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_RSFT,
-                                   KC_LCTL, KC_LALT, KC_LCMD, KC_ENT , KC_SPC , KC_RCMD, MAY2   , MAY3
+                                   KC_LCTL, KC_LALT, KC_LCMD, KC_SPC , KC_ENT , KC_RCMD, MAY2   , MAY3
                  ),
     [1] = LAYOUT(
                  _______, KC_Q   , KC_W   , KC_E   , KC_R   , KC_T   , KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , _______,
@@ -36,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                    _______, _______, _______, _______, _______, _______, _______, _______
                  ),
     [3] = LAYOUT(
-                 _______, KC_EXLM, KC_AT  , KC_HASH, KC_DLR , KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, _______,
+                 KC_GRV , KC_EXLM, KC_AT  , KC_HASH, KC_DLR , KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, _______,
                  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MINS, KC_EQL , KC_LBRC, KC_RBRC, GO1    ,
                  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, EMOJI  , _______,
                                    _______, _______, _______, _______, _______, _______, _______, _______
